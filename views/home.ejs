@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Timestamp</title>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.js"
+      integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+      crossorigin="anonymous"></script>
+    <script src="/assets/ajax.js"></script>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+
+  <body>
+    <h1>Timestamp</h1>
+    <div id="todo-input">
+      <form>
+        <input id="item" type="text" name="item" placeholder="Add new item..." >
+        <!--<input id="datepicker" type="text" name="due" placeholder="Add due date...">-->
+        <button id="submit" type="submit">Submit</button>
+        <!--<button id="undo" type="submit">Undo</button>-->
+      </form>
+    </div>
+    <br>
+
+    <table id="todo-table">
+    <tr>
+      <th>Unix Time</th>
+      <th>Natural Date</th>
+      <th>Date Created</th>
+    </tr>
+    <tr>
+      <td><%= index.unix %></td>
+      <td><%= index.natural %></td>
+      <td><%= index.created %></td>
+    </tr>
+    <tr>
+      <th>Unix Time2 (current time)</th>
+      <th>Natural Date2 (current time)</th>
+      <th>Date Created</th>
+    </tr>
+    <tr>
+      <td><%= index.unix2 %></td>
+      <td><%= index.natural2 %></td>
+      <td><%= index.created %></td>
+    </tr>
+    <tr>
+      <th>Unix Time3 (Difference)</th>
+      <th>Natural Date3 (Difference)</th>
+      <th>Date Created</th>
+    </tr>
+    <tr>
+      <td><%= index.unix3 %></td>
+      <td><%= index.natural3 %></td>
+      <td><%= index.created %></td>
+    </tr>
+   </table>
+
+
+  </body>
+</html>
